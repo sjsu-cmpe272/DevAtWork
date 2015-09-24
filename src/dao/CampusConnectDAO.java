@@ -1,7 +1,12 @@
 package dao;
 
+import model.User;
+
 /**
- * Created by Athitha on 9/20/2015.
+ * Created by Sheeban
  */
-public class CampusConnectDAO {
+public interface CampusConnectDAO {
+
+    public User addUsersData(User user);
+
 }

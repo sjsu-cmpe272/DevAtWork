@@ -10,8 +10,14 @@
       <root url="jar://$PROJECT_DIR$/lib/javassist-3.15.0-GA.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/hibernate-core-4.2.2.Final.jar!/" />
+      <root url="file://$PROJECT_DIR$/twitter lib" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/twitter lib" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/httpclient-4.3.1-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/twitter lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/twitter lib" recursive="false" type="SOURCES" />
   </library>
 </component>
