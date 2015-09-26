@@ -107,13 +107,16 @@
     <br><br>
     <h1 align="center">Smart way to connect campus people</h1>
     <br><br>
-    <form action= "/authenticateUser/CampusConnect.htm" method="post">
+    <form action= "/authenticateUser.htm" method="post">
+        <input type="hidden" name="loginpage" value="authenticate">
 
         <table align="center" border="5">
 
             <tr> <td>Username :</td> <td><input type="text" name="user"/></td> </tr>
-            <tr><td>Password :</td><td><input type="text" name="pass"/></td>
+            <tr><td>Password :</td><td><input type="password" name="pass"/></td>
+            <div class="form-actions">
             <tr><td></td><td><input type="submit" name="login" value="login"></td></tr>
+                </div>
         </table>
     </form>
     <br>
