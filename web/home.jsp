@@ -33,49 +33,6 @@
 
         <div style="overflow: hidden;" class="scroll">
 
-            <div class="scrollContainer">
-
-                <div class="panel" id="panel_1">
-                    <div class="inside">
-                        <img src="icu.jpg" alt="picture" />
-                        <h2>ICU Ward</h2>
-                        <p>For More Information  <a href="http://flickr.com/photos/justbcuz/112479862/">Click Here</a></p>
-                    </div>
-                </div>
-
-                <div class="panel" id="panel_2">
-                    <div class="inside">
-                        <img src="path.jpg" alt="picture" />
-                        <h2>pathology Ward</h2>
-                        <p>For More Information  <a href="http://flickr.com/photos/joshuacraig/2698975899/">Click Here</a></p>
-                    </div>
-                </div>
-
-                <div class="panel" id="panel_3">
-                    <div class="inside">
-                        <img src="mat.jpg" alt="picture" />
-                        <h2>Maternity ward</h2>
-                        <p>For More Information <a href="http://flickr.com/photos/ruudvanleeuwen/468309897/">Click Here</a></p>
-                    </div>
-                </div>
-
-                <div class="panel" id="panel_4">
-                    <div class="inside">
-                        <img src="iccu.jpg" alt="picture" />
-                        <h2>ICCU Unit</h2>
-                        <p>For More Information  <a href="http://flickr.com/photos/emikohime/294092478/">Click Here</a></p>
-                    </div>
-                </div>
-
-                <div class="panel" id="panel_5">
-                    <div class="inside">
-                        <img src="mri.jpg" alt="picture" />
-                        <h2>MRI & X-Ray</h2>
-                        <p>For More Information  <a href="http://flickr.com/photos/fensterbme/499006584/">Click Here</a></p>
-                    </div>
-                </div>
-
-            </div>
 
             <div id="left-shadow"></div>
             <div id="right-shadow"></div>
