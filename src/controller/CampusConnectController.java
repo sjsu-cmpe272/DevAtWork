@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import service.CampusConnectService;
 
@@ -25,10 +24,9 @@ public class CampusConnectController {
 
     @RequestMapping(value = "/authenticateUser/CampusConnect.htm")
     public ModelAndView authenticateUser(@ModelAttribute(value = "user") User user,
-                  HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
-                    @RequestParam("user") String twitterUserName) throws Exception {
+                  HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
 
-        ModelAndView modelAndView = new ModelAndView("/charts.jsp");
+        ModelAndView modelAndView = new ModelAndView("/charts");
         Boolean userExists = campusConnectService.getUserDetails("sheebanshaikh");
         modelAndView.addObject("user", user);
         Map<String,String> userDetails = campusConnectService.getNameVsUserNameMap("sheebanshaikh");
