@@ -23,12 +23,12 @@ public class CampusConnectController {
     @Autowired
     private CampusConnectService campusConnectService;
 
-    @RequestMapping(value = "/authenticateUser.htm")
+    @RequestMapping(value = "/authenticateUser/CampusConnect.htm")
     public ModelAndView authenticateUser(@ModelAttribute(value = "user") User user,
                   HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                     @RequestParam("user") String twitterUserName) throws Exception {
 
-        ModelAndView modelAndView = new ModelAndView("/charts");
+        ModelAndView modelAndView = new ModelAndView("/charts.jsp");
         Boolean userExists = campusConnectService.getUserDetails("sheebanshaikh");
         modelAndView.addObject("user", user);
         Map<String,String> userDetails = campusConnectService.getNameVsUserNameMap("sheebanshaikh");

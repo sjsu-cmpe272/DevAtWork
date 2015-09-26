@@ -40,5 +40,6 @@
 <div style="width: 600px;">
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
 </div>
+
 </body>
 </html>
