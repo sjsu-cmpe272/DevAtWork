@@ -11,7 +11,7 @@ public interface CampusConnectService {
 
     public void addUser(User user);
 
-    public User getUserDetails(String userName) throws Exception;
+    public boolean getUserDetails(String userName) throws Exception;
 
     public Map<String, String> getNameVsUserNameMap(String userName) throws Exception;
 

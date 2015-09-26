@@ -41,7 +41,7 @@ public class CampusConnectServiceImpl implements CampusConnectService {
     }
 
     @Override
-    public User getUserDetails(String userName) throws Exception{
+    public boolean getUserDetails(String userName) throws Exception{
         OAuthConsumer oAuthConsumer = getoAuthConsumer();
         HttpGet httpGetDetailsForUser =
                 new HttpGet("https://api.twitter.com/1.1/users/show.json?screen_name="+userName);
@@ -55,12 +55,13 @@ public class CampusConnectServiceImpl implements CampusConnectService {
         System.out.println(mainJsonString);
 
         JSONObject jsonObjectOfUserDetails = new JSONObject(mainJsonString);
-        System.out.println("Followers Count: "+ jsonObjectOfUserDetails.get("followers_count") +
-                "\nFriendsCount: " + jsonObjectOfUserDetails.get("friends_count")+
-                "\n Description: "+ jsonObjectOfUserDetails.get("description")+
-                "\nLocation: "+ jsonObjectOfUserDetails.get("location"));
-
-        return null;
+        if(statusCode==STATUS_OK) {
+            System.out.println("Followers Count: " + jsonObjectOfUserDetails.get("followers_count") +
+                    "\nFriendsCount: " + jsonObjectOfUserDetails.get("friends_count") +
+                    "\n Description: " + jsonObjectOfUserDetails.get("description") +
+                    "\nLocation: " + jsonObjectOfUserDetails.get("location"));
+        }
+        return statusCode==STATUS_OK;
     }
 
     @Override
@@ -80,7 +81,7 @@ public class CampusConnectServiceImpl implements CampusConnectService {
         JSONObject jsonObject = new JSONObject(mainJsonString);
         JSONArray jsonArray = jsonObject.getJSONArray("users");
         Map<String,String> followersNameVsScreenName = new HashMap<String,String>();
-        for(int i=0; i<jsonArray.length(); i++) {
+        for(int i=0; i<10; i++) {
             JSONObject followersString = jsonArray.getJSONObject(i);
             followersNameVsScreenName.put(followersString.getString("name"), followersString.getString("screen_name"));
             String bio = followersString.getString("description");
@@ -129,6 +130,7 @@ public class CampusConnectServiceImpl implements CampusConnectService {
     public Boolean updateStatus(String twitterUserName, String newStatus) throws Exception{
 
         newStatus = newStatus.replaceAll(" ", "%20");
+        twitterUserName = twitterUserName.replaceAll(" ","%20");
         OAuthConsumer oAuthConsumer = getoAuthConsumer();
         HttpPost httpPostStatusUpdate =
             new HttpPost("https://api.twitter.com/1.1/account/update_profile.json?name="+twitterUserName+"&description="+newStatus);
