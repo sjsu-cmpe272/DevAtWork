@@ -13,9 +13,9 @@ public interface CampusConnectService {
 
     public boolean getUserDetails(String userName) throws Exception;
 
-    public Map<String, String> getNameVsUserNameMap(String userName) throws Exception;
+    public Map<Integer, Map<String, String>> getNameVsUserNameMap(String userName) throws Exception;
 
-    void sendMessage(String twitterUserName, String newMessage) throws Exception;
+    Boolean sendMessage(String twitterUserName, String newMessage) throws Exception;
 
     Boolean postATweet(String twitterUserName, String tweetString) throws Exception;
 

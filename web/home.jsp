@@ -19,7 +19,7 @@
                 if($('#username').val()==" "|| $('#username').val()==""){
                     alert("Please enter Twitter Name");
                 }else{
-                    window.location.href='/authenticateUser/CampusConnect.htm';
+                    window.location.href='/authenticateUser/CampusConnect.htm?userName='+$('#username').val();
                 }
             });
 
