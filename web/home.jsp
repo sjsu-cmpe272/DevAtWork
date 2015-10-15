@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 
 <html>
 <head>
@@ -12,14 +12,14 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-        var jq = $(document).ready(function(){
+        var jq = $(document).ready(function () {
             console.log("Loadeddddddd");
 
-            $('#btn').click( function(){
-                if($('#username').val()==" "|| $('#username').val()==""){
+            $('#btn').click(function () {
+                if ($('#username').val() == " " || $('#username').val() == "") {
                     alert("Please enter Twitter Name");
-                }else{
-                    window.location.href='/authenticateUser/CampusConnect.htm?userName='+$('#username').val();
+                } else {
+                    window.location.href = '/authenticateUser/CampusConnect.htm?userName=' + $('#username').val();
                 }
             });
 
@@ -27,8 +27,6 @@
 
 
     </script>
-
-
 
 
     <style>
@@ -86,10 +84,8 @@
             background-size: 16px 80px;
         }
 
-
-
         .login-block input:active, .login-block input:focus {
-            border: 1px solid #0066CC ;
+            border: 1px solid #0066CC;
         }
 
         #btn {
@@ -98,7 +94,7 @@
             background: #0099FF;
             box-sizing: border-box;
             border-radius: 5px;
-            border: 1px solid #FFFFFF ;
+            border: 1px solid #FFFFFF;
             color: #fff;
             font-weight: bold;
             text-transform: uppercase;
@@ -123,11 +119,8 @@
     <div class="login-block">
         <h1>Login</h1>
 
-        <input type="text" value="" placeholder="Twitter Id" id="username"  />
-        <input type="button"  id="btn" value="submit" />
-
-
-
+        <input type="text" value="" placeholder="Twitter Id" id="username"/>
+        <input type="button" id="btn" value="submit"/>
 
 
     </div>
