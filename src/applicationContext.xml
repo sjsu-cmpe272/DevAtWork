@@ -9,8 +9,8 @@
        http://www.springframework.org/schema/context/spring-context.xsd"
        xmlns:context="http://www.springframework.org/schema/context">
 
-       <tx:annotation-driven transaction-manager="transactionManager"/>
-       <context:annotation-config/>
-       <context:component-scan base-package="service,dao,controller"/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="service,dao,controller"/>
 
 </beans>
