@@ -65,14 +65,14 @@ public class User {
     }
 
 
-    public User(String password, String location, String timeLineDetails, String totalFollowers){
+    public User(String password, String location, String timeLineDetails, String totalFollowers) {
         this.password = password;
         this.location = location;
         this.totalFollowers = totalFollowers;
         this.timeLineDetails = timeLineDetails;
     }
 
-    public User(){
+    public User() {
     }
 
     public class UserBuilder {
