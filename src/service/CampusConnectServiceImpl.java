@@ -29,10 +29,10 @@ public class CampusConnectServiceImpl implements CampusConnectService {
     @Autowired
     private CampusConnectDAO campusConnectDAO;
 
-    static String consumerKeyStr = "ZXdvJOpCkpNeLAqoA4Fxr0kIt";
-    static String consumerSecretStr = "N2WV3Bvm1sgpTPMyRws4mh2winQRWyuLiC6B1yZiAqsnMmGuYl";
-    static String accessTokenStr = "127229156-8MayIQYd3dlgM45f2j0tFD6rhzYpJK4XY3OScO8j";
-    static String accessTokenSecretStr = "JL48vNbxH7XOCdefUqM9y9tffhfGXMHDI8RuFLnMTavLK";
+    static String consumerKeyStr = "";
+    static String consumerSecretStr = "";
+    static String accessTokenStr = "-";
+    static String accessTokenSecretStr = "";
     static Integer STATUS_OK = 200;
 
 
