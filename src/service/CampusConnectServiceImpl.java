@@ -55,7 +55,7 @@ public class CampusConnectServiceImpl implements CampusConnectService {
         String mainJsonString = IOUtils.toString(httpResponse.getEntity().getContent());
         System.out.println(mainJsonString);
 
-        JSONObject jsonObjectOfUserDetails = new JSONObject(mainJsonString);
+        JSONObject jsonObjectOfUserDetails = new JSONObject(mainJsonString)
         if (statusCode == STATUS_OK) {
             System.out.println("Followers Count: " + jsonObjectOfUserDetails.get("followers_count") +
                     "\nFriendsCount: " + jsonObjectOfUserDetails.get("friends_count") +
